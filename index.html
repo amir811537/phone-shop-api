@@ -16,19 +16,90 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header>
-      <h1 class="text-6xl">hunting phone</h1>
+    <header class="container mx-auto">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm text-base dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>home</a></li>
+                <li><a>shop</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost normal-case text-xl lg:text-4xl"
+              >PHONE-LE-LO</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu text-base menu-horizontal px-1">
+              <li><a href="index.html">Home</a></li>
+              <li><a>shop</a></li>
+            </ul>
+          </div>
+          <div  class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white">
+          <a href="login.html">log In</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="my-20">
+        <div
+          class="flex flex-col-reverse lg:flex-row justify-between items-center"
+        >
+          <div class="text-center lg:text-left">
+            <h1 class="lg:text-7xl font-extrabold text-4xl">
+              Apple Iphone <br />
+              13 Pro Max
+            </h1>
+            <p class="py-6">
+              There are many variations of Iphone worldwide <br />
+              but Iphone 13 is the most selling phone.
+            </p>
+            <button class="btn btn-primary text-white text-center">
+              Buy Now
+            </button>
+          </div>
+          <div class="order-last lg:order-first">
+            <!-- Reversed order for mobile -->
+            <img
+              src="https://www.apple.com/v/iphone-13-pro/g/images/overview/design/finishes_1_static__lrwz60bo1d26_large.jpg"
+              class=""
+            />
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="container mx-auto mt-8">
       <section class="bg-gray-200 p-4 m-4">
-        <input
-          id="search-field"
-          type="text"
-          placeholder="search....."
-          class="input input-bordered w-full max-w-xs"
-        />
-        <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+        <div class="flex flex-col items-center"> <!-- Added flex container -->
+          <input
+            id="search-field"
+            type="text"
+            placeholder="Search..."
+            class="input input-bordered w-full max-w-xs mb-2 md:max-w-sm"
+          />
+          <button onclick="handleSearch()" class="btn btn-accent max-w-xs md:max-w-sm">Search</button>
+        </div>
       </section>
 
       <section>
@@ -49,21 +120,21 @@
       </section>
       <!-- show details modal -->
 
-<!-- Open the modal using ID.showModal() method -->
+      <!-- Open the modal using ID.showModal() method -->
 
-<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
-  <form method="dialog" class="modal-box">
-    <h3 id="phoneName" class="font-bold text-3xl"></h3>
-    <div id="ShowDetailContainer">
-      
-    </div>
-    <div class="modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button class="btn">Close</button>
-    </div>
-  </form>
-</dialog>
-
+      <dialog
+        id="show_details_modal"
+        class="modal modal-bottom sm:modal-middle"
+      >
+        <form method="dialog" class="modal-box">
+          <h3 id="phoneName" class="font-bold text-3xl"></h3>
+          <div id="ShowDetailContainer"></div>
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
     </main>
 
     <footer></footer>
