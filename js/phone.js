@@ -90,7 +90,7 @@ ShowDetailContainer.innerHTML =`
 <p><span  class="font-bold">Chipset : </span>${phone?.mainFeatures?.chipSet}</p>
 <p><span  class="font-bold">Released Date : </span>${phone?.releaseDate}</p>
 <p><span  class="font-bold">Brand Name : </span>${phone?.brand}</p>
-<p><span  class="font-bold">GPS : </span> ${phone?.others?.GPS || 'No GPS Available'}</p> `
+<p><span  class="font-bold">GPS : </span> ${phone?.others?.GPS || 'No GPS Available on this device'}</p> `
 
 
   show_details_modal.showModal();
